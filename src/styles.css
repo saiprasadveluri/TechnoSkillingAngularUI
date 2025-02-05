@@ -4,10 +4,20 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    height: 80px;
     
+    height: 80px;    
 }
 
+.flex-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start; 
+    align-items:flex-start;  
+    vertical-align: middle; 
+    background-color: blue;
+    height:100px;
+}
 .HeaderText
 {
     color:white;    
@@ -18,6 +28,7 @@
     line-height:80px;  
     width:75%;
     text-shadow: 4px 4px black;
+    letter-spacing: 3px;
 }
 .footerText
 {
@@ -45,10 +56,29 @@
 {
     color:white;
 }
-
+a{
+    color:white;
+    margin: 5px;
+    text-decoration:none;
+}
 a:hover{
     color:yellow;
 }
 a:visited{
     color:white;
+    
 }
+.content-text
+{
+    font-family: Garamond;;
+    font-size: x-large;
+    text-indent: 70px;
+
+}
+h3.SideHeading{
+    color:blue;
+    font-family:'Times New Roman', Times, serif
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

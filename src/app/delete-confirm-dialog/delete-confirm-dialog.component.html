@@ -1,0 +1,10 @@
+<div style="background-color: antiquewhite;">
+
+
+<h2 mat-dialog-title>Info!</h2>
+<mat-dialog-content>{{confirmMessage}}</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="OnClose(false)">No</button>
+    <button mat-button (click)="OnClose(true)">Yes</button>
+</mat-dialog-actions>
+</div>

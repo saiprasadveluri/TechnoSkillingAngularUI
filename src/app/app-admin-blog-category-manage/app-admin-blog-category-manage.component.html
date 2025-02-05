@@ -1,0 +1,73 @@
+<div class="col-lg-12">
+    <div class="headingShade">
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="postTitle paddingContent">
+                    <span>Manage Blog Category</span>
+                </div>                    
+            </div>
+            <div class="col-lg-2">
+                <div class="paddingRight">
+                <button (click)="AddBlogCategory()" class="buttonAsLink whiteText"><span class="material-symbols-outlined">
+                    note_add
+                    </span></button>
+                    <button (click)="NavigateToHome()" class="buttonAsLink whiteText"><span class="material-symbols-outlined">
+                        house
+                    </span></button>
+            </div>
+            </div>
+        </div>
+    </div>
+     
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-striped ">
+            <thead>
+            <tr>
+                <th>
+                    Ordinal
+                </th>
+                <th>
+                    Title
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(catg of blogCatgArray; track catg.catgId)
+            {
+                <tr>               
+                <td>
+                    {{catg.ordinalNumber}}
+                </td>
+                <td>
+                    {{catg.name}}
+                </td>
+                <td>
+                    {{catg.description}}
+                </td>
+                <td>
+                   
+                    <button class="buttonAsLink" (click)="ConfirmDelete(catg.catgId)"><span class="material-symbols-outlined">
+                        delete
+                        </span></button>
+                    <button class="buttonAsLink" (click)="NavigateManagePosts(catg.catgId)"> <span class="material-symbols-outlined">
+                        sticky_note_2
+                    </span></button>
+                </td>
+            </tr>
+            }         
+            @empty{
+                <p>List empty</p>
+            }
+        </tbody>           
+        </table>
+
+    </div>
+</div>
