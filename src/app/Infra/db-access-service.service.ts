@@ -4,7 +4,9 @@ import { HttpHelper } from './http-helper';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import {jwtDecode} from 'jwt-decode';
-import { BlogCategoryRequestDTO } from '../Models/blog-category-request-dto';
+import { BlogCategoryRequestDTO } from '../models/blog-category-request-dto';
+import { BlogCategoryResponseDTO } from '../Models/blog-category-response-dto';
+import { GallaryResponseDTO } from '../Models/gallary-response-dto';
 
 //import { serialize } from 'object-to-formdata';
 @Injectable({
@@ -31,10 +33,21 @@ export class DbAccessServiceService {
     }
     return this.httpHelper.HttpRequest(frmData,'POST','BlogCategory',hdr);
  }
- GetBlogCategoryList():Observable<HttpEvent<any>>
+ GetBlogCategoryList():Observable<any>
  {
   return this.httpHelper.HttpGet("BlogCategory",undefined,undefined);
  }
+
+ GetGallaryList():Observable<any>
+ {
+  return this.httpHelper.HttpGet("Gallary",undefined,undefined);
+ }
+
+ GetGallaryItem(id:any):Observable<any>
+ {
+  return this.httpHelper.HttpGet(`Gallary/${id}`,undefined,undefined);
+ }
+
 
   
 

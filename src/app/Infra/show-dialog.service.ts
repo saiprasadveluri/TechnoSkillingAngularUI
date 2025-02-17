@@ -1,8 +1,6 @@
 import { inject, Inject, Injectable } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatSnackBar, MatSnackBarRef } from '@angular/material/snack-bar';
-import { SelectCourseDetailDialogComponent } from '../Dialogs/select-course-detail-dialog/select-course-detail-dialog.component';
-import { SelectStudentsDialogComponent } from '../Dialogs/select-students-dialog/select-students-dialog.component';
 
 @Injectable({
   providedIn: 'root'
@@ -34,26 +32,7 @@ export class ShowDialogService {
     }
   }
 
-  ShowSelectCourseDialog(callbackFn:any)
-  {
-    let ShowSelectCourseDialogRef = this.dialog.open(SelectCourseDetailDialogComponent, {
-      width: '1250px'      
-    });
-    ShowSelectCourseDialogRef.afterClosed().subscribe((result:any) => {
-      callbackFn(result);
-    });
-  }
-
-  ShowSelectStudentsDialog(acdYearId:string,showMode:number,callbackFn:any)
-  {
-    let ShowSelectCourseDialogRef = this.dialog.open(SelectStudentsDialogComponent, {
-      width: '1250px',
-      data:{selAcdYearId:acdYearId,ShowMode:showMode}      
-    });
-    ShowSelectCourseDialogRef.afterClosed().subscribe((result:any) => {
-      callbackFn(result);
-    });
-  }
+  
   /*ShowDeleteConfirmDialog(message:string,callBackfn:any)
   {
     var res:boolean=false;

@@ -3,7 +3,7 @@ import { DbAccessServiceService } from '../infra/db-access-service.service';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CategoryDTO } from '../models/app-models';
 import { HttpEventType, HttpResponse } from '@angular/common/http';
-import { ShowDialogService } from '../Infra/show-dialog.service';
+import { ShowDialogService } from '../infra/show-dialog.service';
 import {MatProgressBarModule} from '@angular/material/progress-bar'
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { Router } from '@angular/router';

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DbAccessServiceService } from '../infra/db-access-service.service';
-import { ShowDialogService } from '../Infra/show-dialog.service';
+import { ShowDialogService } from '../infra/show-dialog.service';
 import { BlogCategoryItem } from '../models/app-models';
 import {MatIconModule} from '@angular/material/icon';
 import { Router } from '@angular/router';

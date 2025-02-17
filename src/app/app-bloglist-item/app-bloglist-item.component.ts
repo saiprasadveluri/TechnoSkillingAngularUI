@@ -2,7 +2,7 @@ import { Component, Input, OnInit,Output } from '@angular/core';
 //import { BlogCategoryItem } from '../models/blog-category-request-dto';
 import { EventEmitter } from '@angular/core';
 import {MatCardModule} from '@angular/material/card'
-import { DbAccessServiceService } from '../Infra/db-access-service.service';
+import { DbAccessServiceService } from '../infra/db-access-service.service';
 import { MatToolbarModule } from '@angular/material/toolbar';
 @Component({
   selector: 'app-app-bloglist-item',
